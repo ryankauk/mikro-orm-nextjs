@@ -1,14 +1,14 @@
-import { User } from "../entities/User";
+import { User, MetaData } from "../entities/User";
 import { Options } from "@mikro-orm/core";
-
-const config: Options = {
+import { MongoDriver } from "@mikro-orm/mongodb";
+const config: Options<MongoDriver> = {
   dbName: "async-up",
-  type: "mysql",
-  host: process.env.MYSQL_HOST,
-  port: Number(process.env.MYSQL_PORT),
-  user: process.env.MYSQL_USERNAME,
-  password: process.env.MYSQL_PASSWORD,
-  entities: [User],
+  type: "mongo",
+  // host: process.env.MYSQL_HOST,
+  // port: Number(process.env.MYSQL_PORT),
+  // user: process.env.MYSQL_USERNAME,
+  // password: process.env.MYSQL_PASSWORD,
+  entities: [User, MetaData],
   debug: process.env.NODE_ENV === "development",
 };
 
