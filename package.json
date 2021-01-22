@@ -1,5 +1,5 @@
 {
-  "name": "mikro-orm-nextjs",
+  "name": "mikro-orm-jest",
   "version": "0.1.0",
   "private": true,
   "mikro-orm": {
@@ -10,27 +10,21 @@
     ]
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "mikro-orm": "node --require ts-node/register node_modules/.bin/mikro-orm"
+    "mikro-orm": "node --require ts-node/register node_modules/.bin/mikro-orm",
+    "test": "yarn jest"
   },
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@mikro-orm/cli": "^4.0.7",
-    "@mikro-orm/core": "^4.0.7",
-    "@mikro-orm/mongodb": "^4.0.7",
+    "@mikro-orm/cli": "4.3.5-dev.102",
+    "@mikro-orm/core": "4.3.5-dev.102",
+    "@mikro-orm/mongodb": "4.3.5-dev.102",
+    "@mikro-orm/reflection": "^4.3.4",
     "@types/node": "^14.11.2",
-    "babel-plugin-transform-typescript-metadata": "^0.3.0",
     "dotenv": "^8.2.0",
-    "next": "9.5.3",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@types/react": "^16.9.49",
-    "ts-node": "^9.0.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
     "typescript": "^4.0.3"
   }
 }
